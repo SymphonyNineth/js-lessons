@@ -6,7 +6,6 @@
 
 3. **Անուղղակի վերադարձ**: Մի արտահայտություն վերադարձնող `arrow function`նները անուղղակիորեն վերադարձնում են արտահայտության արդյունքը՝ առանց `return` գրելու անհրաժեշտության եթե ֆունկցիայի բլոկ չի բացվում:
    Օրինակ: `const sum = (a, b) => a + b`
-   
 
 4. **Բացակայում է `arguments` օբյեկտը**: `Arrow function`նները չունեն իրենց `arguments` օբյեկտը: Եթե ​​անհրաժեշտ է ստանալ անհայտ քանակի արգումենտներ, ապա պետք է օգտագործել [Rest Operator](https://learn.javascript.ru/rest-parameters-spread-operator#ostatochnye-parametry) :
 
@@ -30,3 +29,7 @@
    console.log(sum(1, 2, 3)) // Outputs 6:
    console.log(sumTwoNumbers(1, 2)) // Outputs: 3
    ```
+
+https://learn.javascript.ru/arrow-functions-basics
+
+https://learn.javascript.ru/arrow-functions

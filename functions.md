@@ -17,7 +17,7 @@ greet(); // Արդյունք. Hello World
 Ֆունկցիայի արտահայտությունը functionը սահմանում է որպես ավելի մեծ արտահայտության մաս՝ սովորաբար այն վերագրելով փոփոխականին: function expression'ները կարող են անվանվել կամ անանուն լինել։ ինչը նշանակում է, որ դրանք չեն կարող կանչվել նախքան դրանք սահմանելը:
 
 ```javascript
-const greet = ֆունկցիա() {
+const greet = function() {
  console.log ("Hello World");
 };
 
@@ -40,3 +40,7 @@ greet(); // Hello World
    
    - **Function Declaration** ինքնուրույն կառուցվածքներ են:
    - **Function Expression** հաճախ օգտագործվում են որպես վերագրման կամ այլ արտահայտության մաս:
+
+https://learn.javascript.ru/function-basics
+
+https://learn.javascript.ru/advanced-functions
