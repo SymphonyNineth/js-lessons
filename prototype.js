@@ -64,7 +64,6 @@ const Rabit = function (name, speed, strength, health) {
   this.speed = speed;
   this.strength = strength;
   this.health = health;
-
   //   return this;
 };
 
@@ -78,5 +77,5 @@ animal.eat(30); // this = animal
 console.log(newRabit);
 
 // [[Prototype]] - Օբյեկտի պրոտոտիպը որը օգտագործվում է ջավասքրիփթի ինտերպրետատորի կողմից
-// prototype - Օբյեկտի պրոտոտիպը որը օգտագործվում է կոնստրուկտորի կողմից (օր Rabit.prototype = animal;)
+// F.prototype - Օբյեկտի պրոտոտիպը որը օգտագործվում է կոնստրուկտորի կողմից (օր Rabit.prototype = animal;)
 // __proto__ - Օբյեկտի պրոտոտիպի getter/setter, որի միջոցով կարող ենք ստանալ և նշանակել Օբյեկտի պրոտոտիպը
