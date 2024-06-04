@@ -7,13 +7,13 @@
 ```javascript
 // Создайте функцию-конструктор Person
 function Person(name, age) {
-    // Ваш код здесь
+  // Ваш код здесь
 }
 
 // Пример использования:
 const person1 = new Person("Alice", 25);
 console.log(person1.name); // Ожидаемый результат: Alice
-console.log(person1.age);  // Ожидаемый результат: 25
+console.log(person1.age); // Ожидаемый результат: 25
 ```
 
 ### Задача 2: Добавление методов в прототип
@@ -22,14 +22,14 @@ console.log(person1.age);  // Ожидаемый результат: 25
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
 // Добавьте метод greet в прототип
-Person.prototype.greet = function() {
-    // Ваш код здесь
-}
+Person.prototype.greet = function () {
+  // Ваш код здесь
+};
 
 // Пример использования:
 const person2 = new Person("Bob", 30);
@@ -42,17 +42,17 @@ person2.greet(); // Ожидаемый результат: Hello, my name is Bob
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
-Person.prototype.greet = function() {
-    console.log("Hello, my name is " + this.name);
-}
+Person.prototype.greet = function () {
+  console.log("Hello, my name is " + this.name);
+};
 
 // Создайте функцию-конструктор Student, наследующую от Person
 function Student(name, age, course) {
-    // Ваш код здесь
+  // Ваш код здесь
 }
 
 // Пример использования:
@@ -67,26 +67,26 @@ console.log(student1.course); // Ожидаемый результат: Math
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
-Person.prototype.greet = function() {
-    console.log("Hello, my name is " + this.name);
-}
+Person.prototype.greet = function () {
+  console.log("Hello, my name is " + this.name);
+};
 
 function Student(name, age, course) {
-    Person.call(this, name, age);
-    this.course = course;
+  Person.call(this, name, age);
+  this.course = course;
 }
 
 Student.prototype = Object.create(Person.prototype);
 Student.prototype.constructor = Student;
 
 // Переопределите метод greet
-Student.prototype.greet = function() {
-    // Ваш код здесь
-}
+Student.prototype.greet = function () {
+  // Ваш код здесь
+};
 
 // Пример использования:
 const student2 = new Student("Dave", 22, "Physics");
@@ -99,26 +99,26 @@ student2.greet(); // Ожидаемый результат: Hello, my name is Da
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
-Person.prototype.greet = function() {
-    console.log("Hello, my name is " + this.name);
-}
+Person.prototype.greet = function () {
+  console.log("Hello, my name is " + this.name);
+};
 
 function Student(name, age, course) {
-    Person.call(this, name, age);
-    this.course = course;
+  Person.call(this, name, age);
+  this.course = course;
 }
 
 Student.prototype = Object.create(Person.prototype);
 Student.prototype.constructor = Student;
 
 // Добавьте метод study в прототип Student
-Student.prototype.study = function() {
-    // Ваш код здесь
-}
+Student.prototype.study = function () {
+  // Ваш код здесь
+};
 
 // Пример использования:
 const student3 = new Student("Eve", 21, "Chemistry");
@@ -131,21 +131,21 @@ student3.study(); // Ожидаемый результат: Eve is studying Chem
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
-Person.prototype.greet = function() {
-    console.log("Hello, my name is " + this.name);
-}
+Person.prototype.greet = function () {
+  console.log("Hello, my name is " + this.name);
+};
 
-Person.prototype.isStudent = function() {
-    // Ваш код здесь
-}
+Person.prototype.isStudent = function () {
+  // Ваш код здесь
+};
 
 function Student(name, age, course) {
-    Person.call(this, name, age);
-    this.course = course;
+  Person.call(this, name, age);
+  this.course = course;
 }
 
 Student.prototype = Object.create(Person.prototype);
@@ -164,22 +164,22 @@ console.log(student4.isStudent()); // Ожидаемый результат: tru
 
 ```javascript
 function Person(name, age) {
-    this.name = name;
-    this.age = age;
+  this.name = name;
+  this.age = age;
 }
 
-Person.prototype.greet = function() {
-    console.log("Hello, my name is " + this.name);
-}
+Person.prototype.greet = function () {
+  console.log("Hello, my name is " + this.name);
+};
 
 // Добавьте статический метод isPerson
-Person.isPerson = function(obj) {
-    // Ваш код здесь
-}
+Person.isPerson = function (obj) {
+  // Ваш код здесь
+};
 
 function Student(name, age, course) {
-    Person.call(this, name, age);
-    this.course = course;
+  Person.call(this, name, age);
+  this.course = course;
 }
 
 Student.prototype = Object.create(Person.prototype);
@@ -199,11 +199,11 @@ console.log(Person.isPerson({})); // Ожидаемый результат: fals
 
 ```javascript
 const person = {
-    name: "John",
-    age: 40,
-    greet() {
-        console.log("Hello, my name is " + this.name);
-    }
+  name: "John",
+  age: 40,
+  greet() {
+    console.log("Hello, my name is " + this.name);
+  },
 };
 
 // Создайте объект teacher, наследующий от person
@@ -222,17 +222,17 @@ console.log(teacher.subject); // Ожидаемый результат: Math
 
 ```javascript
 const person = {
-    name: "John",
-    age: 40,
-    greet() {
-        console.log("Hello, my name is " + this.name);
-    }
+  name: "John",
+  age: 40,
+  greet() {
+    console.log("Hello, my name is " + this.name);
+  },
 };
 
 const canTeach = {
-    teach() {
-        console.log(this.name + " is teaching " + this.subject);
-    }
+  teach() {
+    console.log(this.name + " is teaching " + this.subject);
+  },
 };
 
 const teacher = Object.create(person);
@@ -254,15 +254,15 @@ teacher.teach(); // Ожидаемый результат: Kate is teaching Math
 ```javascript
 // Создайте функцию-конструктор Counter
 function Counter() {
-    let count = 0;
+  let count = 0;
 
-    this.increment = function() {
-        // Ваш код здесь
-    };
+  this.increment = function () {
+    // Ваш код здесь
+  };
 
-    this.getValue = function() {
-        // Ваш код здесь
-    };
+  this.getValue = function () {
+    // Ваш код здесь
+  };
 }
 
 // Пример использования:
