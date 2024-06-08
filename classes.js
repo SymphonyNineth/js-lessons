@@ -222,6 +222,21 @@ const square = new Square(4);
 square.area = 100;
 console.log(square.side);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Data {
   constructor(data) {
     this.data = data;

@@ -9,3 +9,15 @@
   gap: 30px;
   align-items: flex-start;
 }
+
+.itemsContainer {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.item {
+  background-color: rgb(233, 233, 233);
+  padding: 20px;
+}

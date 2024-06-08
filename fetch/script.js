@@ -14,7 +14,7 @@ function createPostElement(title, body) {
   return container;
 }
 
-fetchButton.addEventListener("click", () => {
+const traditionalPromise = () => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -27,8 +27,37 @@ fetchButton.addEventListener("click", () => {
       postsElements.forEach((element) => {
         postsContainer.appendChild(element);
       });
+    })
+    .finally(() => console.log("gameover"))
+    .catch((error) => {
+      postsContainer.style.background = "red";
+      postsContainer.style.color = "white";
+      postsContainer.innerText = JSON.stringify("Could not fetch the posts");
     });
-});
+};
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log("aaa")
+    const postsElements = data.map((post) =>
+      createPostElement(post.title, post.body)
+    );
+    postsElements.forEach((element) => {
+      postsContainer.appendChild(element);
+    });
+  } catch (error) {
+    console.error(error);
+    postsContainer.style.background = "red";
+    postsContainer.style.color = "white";
+    postsContainer.innerText = JSON.stringify("Could not fetch the posts");
+  } finally {
+    console.log("gameOver");
+  }
+};
+
+fetchButton.addEventListener("click", fetchData);
 
 // {
 //   "userId": 1,

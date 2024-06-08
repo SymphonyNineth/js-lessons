@@ -3,6 +3,8 @@ const button = document.getElementById("getPosts");
 const calculateFactorial = document.getElementById("calculate");
 const shoppingList = document.getElementById("list");
 
+const square = document.getElementById("square");
+
 // const recursiveFactorial = (n) => {
 //   if (n === 0) {
 //     return 1;
@@ -40,3 +42,20 @@ addItemButton.addEventListener("click", () => {
 });
 
 // https://www.youtube.com/watch?v=yp5Cj36g5Uw
+
+// for (let i = 0; i < 600; i++) {
+//   console.log(square.style.top);
+//   square.style.top = `${i}px`
+//   square.style.right = `${i}px`
+// }
+
+// let i = 0;
+// setInterval(() => {
+//   i++;
+//   square.style.top = `${i}px`;
+//   square.style.right = `${i}px`;
+// }, 1);
+
+// setInterval(() => {
+//   i = 0;
+// }, 3200);
