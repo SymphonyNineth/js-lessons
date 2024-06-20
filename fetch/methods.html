@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact US</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Contact Us</h1>
     <button id="fetchButton">Fetch Items</button>
     <div class="itemsContainer" id="items"></div>
-    
-    <input type="number" name="id" id="id"/>
-    <button id="delete" type="button">Delete item by id</button>
+
+    <div class="inputContainer">
+      <div>
+        <input placeholder="id" type="number" name="id" id="id" />
+        <button id="delete" type="button">Delete item by id</button>
+      </div>
+      <div>
+        <input type="number" id="patchId" placeholder="id" />
+        <input placeholder="Write name to change" type="text" id="nameInput" />
+        <button id="patchButton" type="button">Patch item by id</button>
+      </div>
+    </div>
     <script src="methods.js"></script>
   </body>
 </html>

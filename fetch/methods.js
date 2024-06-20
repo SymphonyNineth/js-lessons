@@ -6,6 +6,10 @@ const idInput = document.getElementById("id");
 const fetchButton = document.getElementById("fetchButton");
 const deleteButton = document.getElementById("delete")
 
+const nameInput = document.getElementById("nameInput");
+const patchId = document.getElementById("patchId");
+const patchButton = document.getElementById("patchButton");
+
 const fetchItems = async () => {
     itemContainer.innerHTML = "";
     const response = await fetch(itemsURL);
@@ -29,6 +33,7 @@ const fetchItems = async () => {
     })
 }
 
+fetchButton.addEventListener("click", fetchItems)
 
 const deleteItem = async () => {
     const id = Number(idInput.value);
@@ -41,5 +46,25 @@ const deleteItem = async () => {
     idInput.value = "";
 }
 
-fetchButton.addEventListener("click", fetchItems)
+
 deleteButton.addEventListener("click", deleteItem)
+
+
+const patchItem = async () => {
+    const name = nameInput.value;
+    const id = Number(patchId.value);
+    const response = await fetch(`${itemsURL}/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name }),
+    });
+    const updatedItem = await response.json();
+    console.log("Updated Item", updatedItem);
+    fetchItems();
+    nameInput.value = "";
+    patchId.value = "";
+}
+
+patchButton.addEventListener("click", patchItem)

@@ -21,3 +21,9 @@
   background-color: rgb(233, 233, 233);
   padding: 20px;
 }
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  }
